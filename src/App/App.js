@@ -7,8 +7,15 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello Friends!!</p>
+          <div className="header-left">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1>Shatterwood Inn</h1>
+          </div>
+          <div className="header-right">
+            <a className="header-button"><h3>Log In</h3></a>
+            <a className="header-button"><h3>Sign Up</h3></a>
+            <a className="header-button"><h3>Guest</h3></a>
+          </div>
         </header>
       </div>
     );

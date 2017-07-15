@@ -4,16 +4,30 @@
 
 .App-logo {
   height: 80%;
+  margin-right: 2%;
 }
 
 .App-header {
   display: flex;
-  background-color: #222;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./header_bg_image.jpg");
   height: 20%;
   padding: 2%;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.header-left, .header-right {
+  display: flex;
+}
+
+.header-right {
+  width: 30%;
+}
+
+.header-button {
+  height: 30%;
+  width: 100%;
+  border: 2px solid white;
+  margin: 1%;
 }
