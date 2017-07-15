@@ -6,8 +6,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Friend</p>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Hello Friends!!</p>
+        </header>
       </div>
     );
   }

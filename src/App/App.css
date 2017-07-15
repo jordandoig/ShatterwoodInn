@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80%;
+}
+
+.App-header {
+  display: flex;
+  background-color: #222;
+  height: 20%;
+  padding: 2%;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
