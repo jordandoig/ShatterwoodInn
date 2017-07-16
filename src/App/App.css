@@ -1,20 +1,30 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 80%;
-  margin-right: 2%;
+  height: 100%;
 }
 
 .App-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("./header_bg_image.jpg");
-  height: 20%;
+  height: 10%;
   padding: 2%;
   color: white;
+}
+
+.App-main {
+  background-color: white;
+  height: 70%;
+}
+
+.App-footer {
+  height: 10%;
+  color: white;
+}
+
+.App-logo {
+  height: 80%;
+  margin-right: 2%;
 }
 
 .header-left, .header-right {

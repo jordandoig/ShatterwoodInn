@@ -17,6 +17,12 @@ class App extends Component {
             <a className="header-button"><h3>Guest</h3></a>
           </div>
         </header>
+        <main className="App-main">
+          <p>Content goes here</p>
+        </main>
+        <footer className="App-footer">
+          <p>Footer stuff</p>
+        </footer>
       </div>
     );
   }
