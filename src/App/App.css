@@ -4,29 +4,43 @@ flax #EDD382
 kobicha #774E24
 prune #6E0D25*/
 
+p {
+  margin: 0;
+}
+
+button {
+  border: 1px solid #020122;
+  color: #020122;
+  background-color: #cc5500;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  height: 100%;
 }
 
 .App-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
+  height: 100px;
   padding: 2%;
   color: white;
 }
 
 .App-main {
   display: flex;
+  justify-content: space-between;
   background-color: white;
-  height: 70%;
   width: 100%;
 }
 
 .App-footer {
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
   color: white;
 }
 
@@ -56,5 +70,17 @@ prune #6E0D25*/
 }
 
 .Main-content {
-  width: 85%;
+  width: 83%;
+}
+
+.Display-section {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid #020122;
+  margin-top: 10px;
+}
+
+.Display-content {
+  display: flex;
+  justify-content: space-between;
 }
