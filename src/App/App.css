@@ -71,16 +71,30 @@ button {
 
 .Main-content {
   width: 83%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.Main-display {
+  width: 100%;
 }
 
 .Display-section {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   border: 1px solid #020122;
   margin-top: 10px;
 }
 
 .Display-content {
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.Display-header {
+  display: flex;
+  justify-content: space-around;
 }
