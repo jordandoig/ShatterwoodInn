@@ -1,3 +1,9 @@
+/*rich black #020122
+burnt orange #cc5500
+flax #EDD382
+kobicha #774E24
+prune #6E0D25*/
+
 .App {
   text-align: center;
   height: 100%;
@@ -13,8 +19,10 @@
 }
 
 .App-main {
+  display: flex;
   background-color: white;
   height: 70%;
+  width: 100%;
 }
 
 .App-footer {
@@ -40,4 +48,13 @@
   width: 100%;
   border: 2px solid white;
   margin: 1%;
+}
+
+.Progress-bar {
+  width: 15%;
+  background-color: #cc5500;
+}
+
+.Main-content {
+  width: 85%;
 }

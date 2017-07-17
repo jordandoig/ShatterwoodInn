@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
+import ClassList from '../Class/class';
 
 class App extends Component {
+  constructor () {
+    super();
+  }
+
+  componentDidMount () {
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,10 +27,18 @@ class App extends Component {
           </div>
         </header>
         <main className="App-main">
-          <p>Content goes here</p>
+          <section className="Progress-bar">
+            <p>Progress Goes Here</p>
+          </section>
+          <section className="Main-content">
+            <h2>Classes</h2>
+            <section>
+              <ClassList />
+            </section>
+          </section>
         </main>
         <footer className="App-footer">
-          <p>Footer stuff</p>
+          <p>&#169; Jordan Doig, All rules courtesy of D&D 5e, &#169; Wizards of the Coast</p>
         </footer>
       </div>
     );

@@ -1,4 +1,11 @@
+/*rich black #020122
+burnt orange #cc5500
+flax #EDD382
+kobicha #774E24
+prune #6E0D25*/
+
 html, body {
+  color: #020122;
   height: 100%;
   width: 100%;
   margin: 0;
