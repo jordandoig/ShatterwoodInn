@@ -143,7 +143,7 @@ class App extends Component {
           </div>
         </header>
         <main className="App-main">
-          <section className="Progress-bar">
+          {/* <section className="Progress-bar">
             <header>
               <h2>Progress</h2>
             </header>
@@ -154,28 +154,38 @@ class App extends Component {
                 )
               })
             }
-          </section>
+          </section> */}
           <section className="Main-content">
-            <h2>Classes</h2>
-            <section className="Main-display">
-              {
-                this.state.display.map((item, index) => {
-                  return (
-                    <section key={index} className="Display-section">
-                      <input type="radio" name="selection"></input>
-                      <table className="Display-content">
-                        <tr className="Display-header">
-                          <td>{item.name}</td>
-                          <td>{item.hit_die}</td>
-                          <td>{item.primary_ability}</td>
-                        </tr>
-                        <br/>
-                        <tr>{item.desc}</tr>
-                      </table>
-                    </section>
-                  )
-                })
-              }
+            <section className="Main-left">
+              <section className="Main1">
+                <h2>Getting into Dungeons &amp; Dragons is hard</h2>
+                <section className="img-list">
+                  <img src="http://i.imgur.com/jgNeHlT.jpg" className="main-img"></img>
+                  <ul className="Main-list">
+                    <li><h3>Thousands of Pages</h3></li>
+                    <li><h3>Hundreds of Rules</h3></li>
+                    <li><h3>Twelve Base Classes</h3></li>
+                    <li><h3>Nine Base Races</h3></li>
+                    <li><h3>Billions of Possible Combinations</h3></li>
+                  </ul>
+                </section>
+              </section>
+              <section className="Main2">
+                <h2>Shatterwood Inn makes it easy!</h2>
+                <section className="img-list">
+                  <img src="https://s-media-cache-ak0.pinimg.com/736x/6c/56/f2/6c56f2d899d08cdaf4961483b14d8e11--gaming-memes-tabletop-rpg.jpg" className="main-img"></img>
+                  <ul className="Main-list">
+                    <li><h3>One Step at a Time</h3></li>
+                    <li><h3>In-Depth Explanations</h3></li>
+                    <li><h3>Explore your Options</h3></li>
+                    <li><h3>Learn as you Go</h3></li>
+                    <li><h3>Printable PDF</h3></li>
+                  </ul>
+                </section>
+              </section>
+            </section>
+            <section className="buttonBox">
+              <a href="/" className="main-button"><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></a>
             </section>
           </section>
         </main>
