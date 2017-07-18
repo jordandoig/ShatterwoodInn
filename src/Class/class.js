@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 const classList = [
   {
@@ -96,11 +97,13 @@ class Classes extends Component {
   }
 
   componentDidMount () {
-    this.getClasses()
+    this.getClasses();
   }
 
   getClasses () {
-    this.setState({charClasses: classList});
+    Axios.get('http://www.dnd5eapi.co/api/classes/').then((data) => {
+      console.log(data);
+    })
   }
 
   render() {
@@ -118,7 +121,7 @@ class Classes extends Component {
             })
           }
         </section> */}
-        <section className="Class-list">
+        {/* <section className="Class-list">
           {
             this.state.charClasses.map((cl, index) => {
               return (
@@ -131,7 +134,7 @@ class Classes extends Component {
               )
             })
           }
-        </section>
+        </section> */}
       </div>
     )
   }
