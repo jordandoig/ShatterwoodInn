@@ -53,7 +53,7 @@ class App extends Component {
                     <li><h3>In-Depth Explanations</h3></li>
                     <li><h3>Explore your Options</h3></li>
                     <li><h3>Learn as you Go</h3></li>
-                    <li><h3>Print out a PDF</h3></li>
+                    <li><h3>Printable PDF Character Sheet</h3></li>
                   </ul>
                 </section>
               </section>
