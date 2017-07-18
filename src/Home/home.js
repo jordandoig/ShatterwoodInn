@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../logo.png';
 import './home.css';
+import Header from '../Header/header';
 
 class Home extends Component {
 
 render() {
   return (
     <div className="Home">
-      <header className="Home-header">
-        <div className="header-left">
-          <img src={logo} className="Home-logo" alt="logo" />
-          <h1>Shatterwood Inn</h1>
-        </div>
-        <div className="header-right">
-          <a className="header-button"><h3>Log In</h3></a>
-          <a className="header-button"><h3>Sign Up</h3></a>
-          <a className="header-button"><h3>Guest</h3></a>
-        </div>
-      </header>
+      <Header />
       <main className="Home-main">
         <section className="Main-content">
           <section className="Main-left">

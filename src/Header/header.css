@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 2%;
+  color: white;
+}
+
+.header-logo {
+  height: 80%;
+  margin-right: 2%;
+}
+
+.header-left, .header-right {
+  display: flex;
+}
+
+.header-left {
+  width: 30%;
+  align-items: center;
+}
+
+.header-right {
+  width: 30%;
+}
+
+.header-button {
+  height: 30%;
+  width: 100%;
+  border: 2px solid white;
+  margin: 1%;
+}
