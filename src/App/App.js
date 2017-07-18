@@ -89,31 +89,9 @@ const classList = [
   }
 ];
 
-// const raceList = [
-//   {
-//     id: 1,
-//     name: 'Dwarf'
-//   },
-//   {
-//     id: 2,
-//     name: 'Elf'
-//   }
-// ];
-//
-// const subraceList = [
-//   {
-//     id: 1,
-//     name: 'Dwarf'
-//   },
-//   {
-//     id: 2,
-//     name: 'Elf'
-//   }
-// ];
-
 class App extends Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       progress: [],
       display: []
