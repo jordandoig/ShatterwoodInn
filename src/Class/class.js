@@ -88,8 +88,8 @@ const classList = [
 ];
 
 class Classes extends Component {
-  constructor () {
-    super ();
+  constructor (props) {
+    super (props);
     this.state = {
       charClasses: []
     }

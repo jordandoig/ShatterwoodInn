@@ -4,6 +4,9 @@ import './home.css';
 import Header from '../Header/header';
 
 class Home extends Component {
+  constructor (props) {
+    super(props);
+  }
 
 render() {
   return (
