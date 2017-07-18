@@ -3,10 +3,6 @@ import Slider from 'react-slick';
 import './carousel.css';
 
 class Carousel extends Component {
-  constructor (props) {
-    super(props);
-  }
-
   render () {
     let settings = {
       dots: true,

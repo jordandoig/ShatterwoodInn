@@ -3,7 +3,7 @@ import logo from '../logo.png';
 import './App.css';
 import Home from '../Home/home';
 import Classes from '../Class/class';
-import Carousel from '../Carousel/carousel';
+// import Carousel from '../Carousel/carousel';
 
 class App extends Component {
   constructor (props) {

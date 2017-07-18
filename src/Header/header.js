@@ -3,10 +3,6 @@ import logo from '../logo.png';
 import './header.css';
 
 class Header extends Component {
-  constructor (props) {
-    super(props);
-  }
-
   render () {
     return (
       <header className="header">
