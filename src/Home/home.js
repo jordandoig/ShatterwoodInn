@@ -43,7 +43,7 @@ render() {
             </section>
           </section>
           <section className="buttonBox">
-            <a href="/" className="main-button"><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></a>
+            <a className="main-button"><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></a>
           </section>
         </section>
       </main>

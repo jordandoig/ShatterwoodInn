@@ -8,26 +8,30 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
+      display: <Home />,
       progress: [],
-      home: true,
+      home: false,
       classes: false
     }
   }
 
-
-
   componentDidMount () {
     this.setState({home: true});
-    console.log(this.homeVar);
   }
 
-  homeVar =  true;
+  shouldComponentUpdate () {
+    if (this.state.home) {
+      this.setState({display: <Home />});
+    } else if (this.state.classes) {
+      this.setState({display: <Classes />});
+    }
+    return true;
+  }
 
   render() {
     return (
       <div className="App">
-        <Home />
-        <Classes />
+        {this.state.display}
         <footer className="App-footer">
           <p>&#169; Jordan Doig</p>
           <img src={logo} className="Footer-logo" alt="logo"/>
