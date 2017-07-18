@@ -132,3 +132,7 @@ h2 {
 .img-list {
   display: flex;
 }
+
+.Footer-logo {
+  height: 50px;
+}
