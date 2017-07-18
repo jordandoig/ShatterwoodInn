@@ -3,6 +3,7 @@ import logo from '../logo.png';
 import './App.css';
 import Home from '../Home/home';
 import Classes from '../Class/class';
+import Carousel from '../Carousel/carousel';
 
 class App extends Component {
   constructor (props) {
@@ -31,6 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Carousel />
         {this.state.display}
         <footer className="App-footer">
           <p>&#169; Jordan Doig</p>
