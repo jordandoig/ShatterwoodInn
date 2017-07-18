@@ -32,7 +32,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Carousel />
         {this.state.display}
         <footer className="App-footer">
           <p>&#169; Jordan Doig</p>
