@@ -103,7 +103,6 @@ class Classes extends Component {
   getClasses () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/').then((data) => {
       this.setState({charClasses: data.data.results});
-      console.log(this.state.charClasses);
     })
   }
 
@@ -122,20 +121,20 @@ class Classes extends Component {
             })
           }
         </section> */}
-        {/* <section className="Class-list">
-          {
+        {/* <section className="Class-list"> */
+          /* {
             this.state.charClasses.map((cl, index) => {
               return (
-                <section className="Class-section">
-                  <h3 key={index.toString()}>{cl.name}</h3>
+                <section key={index} className="Class-section">
+                  <h3>{cl.name}</h3>
                   <section>
 
                   </section>
                 </section>
               )
             })
-          }
-        </section> */}
+          } */
+        /* </section> */}
       </div>
     )
   }
