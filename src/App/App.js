@@ -6,12 +6,19 @@ import Home from '../Home/home';
 import Classes from '../Class/class';
 
 class App extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      choices: []
+    }
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <Route exact path='/' component={Home}/>
-          <Route exact path='/class' component={Classes}/>
+          <Route path='/class' component={Classes} choices={this.state.choices}/>
           <footer className="App-footer">
             <p>&#169; Jordan Doig</p>
             <img src={logo} className="Footer-logo" alt="logo"/>

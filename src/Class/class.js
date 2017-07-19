@@ -98,11 +98,13 @@ class Classes extends Component {
 
   componentDidMount () {
     this.getClasses();
+
   }
 
   getClasses () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/').then((data) => {
       this.setState({charClasses: data.data.results});
+      console.log(this.props.choices);
     })
   }
 
