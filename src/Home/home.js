@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from '../logo.png';
+import { Link } from 'react-router-dom';
 import './home.css';
 import Header from '../Header/header';
 
@@ -39,7 +39,7 @@ class Home extends Component {
               </section>
             </section>
             <section className="buttonBox">
-              <a className="main-button"><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></a>
+              <Link className="main-button"  to='/class'><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></Link>
             </section>
           </section>
         </main>
