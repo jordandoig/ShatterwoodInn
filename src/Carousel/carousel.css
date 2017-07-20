@@ -2,10 +2,21 @@
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  color: white;
 }
 
 .Carousel-Item {
   height: 28px;
-  color: white;
-  margin-top:
+}
+
+.Carousel-Nav {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.Carousel-Button {
+  background-color: inherit;
+  color: inherit;
+  border: 0;
 }
