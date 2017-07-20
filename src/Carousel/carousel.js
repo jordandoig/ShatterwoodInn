@@ -3,6 +3,17 @@ import Slider from 'react-slick';
 import './carousel.css';
 
 class Carousel extends Component {
+  constructor (props) {
+    super(props);
+
+    this.changeSelection = this.changeSelection.bind(this);
+  }
+
+  changeSelection () {
+    let selection = document.getElementsByClassName('slick-center');
+    this.props.handleSelection(selection[0].innerHTML);
+  }
+
   render () {
     let settings = {
       infinite: true,
@@ -10,7 +21,8 @@ class Carousel extends Component {
       slidesToShow: 5,
       slidesToScroll: 1,
       centerMode: true,
-      initialSlide: 0
+      initialSlide: 0,
+      afterChange: this.changeSelection
     };
 
     return (

@@ -10,14 +10,21 @@ class Builder extends Component {
     super(props);
     this.state = {
       progressSelections: [],
-      options: [{}]
+      options: [{}],
+      currentSelection: ""
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleChange (arr) {
     this.setState({options: arr});
+    this.setState({currentSelection: this.state.options[0].name});
+  }
+
+  handleSelection (str) {
+    this.setState({currentSelection: str});
   }
 
   render () {
@@ -25,14 +32,15 @@ class Builder extends Component {
       <Router>
         <div className="Builder">
           <section className="Builder-Top">
-            <Carousel options={this.state.options}/>
+            <Carousel options={this.state.options} handleSelection={this.handleSelection}/>
           </section>
           <section className="Builder-Left">
             <Progress progressSelections={this.state.progressSelections}/>
           </section>
           <section className="Builder-Right">
             <Route path="/new/class" render={(props) => (
-              <Classes {...props} handleChange={this.handleChange} options={this.state.options}/>
+              <Classes {...props} handleChange={this.handleChange} options={this.state.options}
+              currentSelection={this.state.currentSelection}/>
             )}/>
           </section>
         </div>
