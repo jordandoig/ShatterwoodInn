@@ -8,15 +8,3 @@
 .Carousel-Item {
   height: 28px;
 }
-
-.Carousel-Nav {
-  display: flex;
-  justify-content: space-around;
-  height: 30px;
-}
-
-.Carousel-Button {
-  background-color: inherit;
-  color: inherit;
-  border: 0;
-}
