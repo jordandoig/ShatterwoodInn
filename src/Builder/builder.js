@@ -10,13 +10,15 @@ class Builder extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      progressSelections: {},
+      progressSelections: [],
       options: [{}],
-      currentSelection: ""
+      currentSelection: "",
+      titleOrder: ["Class", "Race"]
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
+    this.updateProgress = this.updateProgress.bind(this);
   }
 
   handleChange (arr) {
@@ -26,6 +28,15 @@ class Builder extends Component {
 
   handleSelection (str) {
     this.setState({currentSelection: str});
+  }
+
+  updateProgress () {
+    let arr = this.state.progressSelections;
+    let obj = {};
+    obj.title = this.state.titleOrder.shift();
+    obj.choice = this.state.currentSelection;
+    arr.push(obj);
+    this.setState({progressSelections: arr});
   }
 
   render () {
@@ -51,7 +62,7 @@ class Builder extends Component {
             </section>
           </section>
           <section className="Builder-Bottom">
-            <Link to="/new/race" className="Builder-Button">NEXT</Link>
+            <Link to="/new/race" className="Builder-Button" onClick={this.updateProgress}>NEXT</Link>
           </section>
         </div>
       </Router>

@@ -12,6 +12,7 @@ h2 {
 }
 
 .App {
+  height: 50em;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -21,11 +22,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 10%;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 .Footer-logo {
-  height: 50px;
+  height: 80%;
 }

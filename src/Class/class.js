@@ -77,8 +77,6 @@ const classList = [
   }
 ];
 
-let count = 0;
-
 class Classes extends Component {
   constructor (props) {
     super (props);
@@ -114,9 +112,6 @@ class Classes extends Component {
   getSelectedClass () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.props.currentSelection.toLowerCase()).then(data => {
       this.setState({selectedClass: data.data})
-      count++;
-      console.log(count);
-      console.log(this.state.selectedClass);
     })
   }
 
@@ -142,7 +137,7 @@ class Classes extends Component {
     } else {
       return (
         <div className="Loading">
-          
+          {/* Loader to go here */}
         </div>
       )
     }

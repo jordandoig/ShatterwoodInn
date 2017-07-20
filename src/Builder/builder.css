@@ -1,3 +1,12 @@
+.Builder {
+  height: 100%;
+}
+
 .Builder-Top {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Builder-Main {
+  display: flex;
+  height: 90%;
 }
