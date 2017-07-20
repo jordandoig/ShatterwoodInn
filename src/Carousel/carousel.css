@@ -1,7 +1,11 @@
 .Carousel {
   width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .Carousel-Item {
-  height: 50px;
+  height: 28px;
+  color: white;
+  margin-top:
 }
