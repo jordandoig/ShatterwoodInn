@@ -39,7 +39,7 @@ class Home extends Component {
               </section>
             </section>
             <section className="buttonBox">
-              <Link className="main-button"  to='/class'><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></Link>
+              <Link className="main-button"  to='/new/class'><h3>Click Here</h3><b>To Make Your Own D&amp;D Character</b></Link>
             </section>
           </section>
         </main>

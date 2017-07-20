@@ -7,7 +7,7 @@ class Progress extends Component {
     return (
       <div className="Progress">
         {
-          this.props.choices.map((item, index) => {
+          this.props.progressSelections.map((item, index) => {
             return (
               <div key={index} className="Progress-item">
                 <p>{item.title}: {item.choice}</p>

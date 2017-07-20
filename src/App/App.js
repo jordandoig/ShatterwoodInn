@@ -3,22 +3,15 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from '../logo.png';
 import './App.css';
 import Home from '../Home/home';
-import Classes from '../Class/class';
+import Builder from '../Builder/builder';
 
 class App extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      choices: []
-    }
-  }
-
   render() {
     return (
       <Router>
         <div className="App">
-          <Route exact path='/' component={Home} choices={this.state.choices}/>
-          <Route path='/class' component={Classes} choices={this.state.choices}/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/new' component={Builder}/>
           <footer className="App-footer">
             <p>&#169; Jordan Doig</p>
             <img src={logo} className="Footer-logo" alt="logo"/>
