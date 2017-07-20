@@ -77,11 +77,13 @@ const classList = [
   }
 ];
 
+let count = 0;
+
 class Classes extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      charClasses: []
+      selectedClass: null
     }
   }
 
@@ -89,9 +91,12 @@ class Classes extends Component {
     this.getClasses();
   }
 
+  componentDidUpdate () {
+    this.shouldChange();
+  }
+
   getClasses () {
-    Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/').then((data) => {
-      // console.log(data.data.results);
+    Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/').then(data => {
       let classData = data.data.results.map((item, index) => {
         return {
           id: classList[index].id,
@@ -106,25 +111,41 @@ class Classes extends Component {
     })
   }
 
+  getSelectedClass () {
+    Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.props.currentSelection.toLowerCase()).then(data => {
+      this.setState({selectedClass: data.data})
+      count++;
+      console.log(count);
+      console.log(this.state.selectedClass);
+    })
+  }
+
+  shouldChange () {
+    if (this.props.currentSelection && !this.state.selectedClass) {
+      this.getSelectedClass();
+    } else if (this.state.selectedClass !== null) {
+      if (this.state.selectedClass.name !== this.props.currentSelection) {
+        this.getSelectedClass();
+      }
+    }
+  }
+
   render() {
-    return (
-      <div className="Class-main">
-        <section className="Class-list">
-          {
-            this.props.options.map((cl, index) => {
-              return (
-                <section key={index} className="Class-section">
-                  <h3>{cl.name}</h3>
-                  <section>
-                    {cl.apiUrl}
-                  </section>
-                </section>
-              )
-            })
-          }
-        </section>
-      </div>
-    )
+    if (this.state.selectedClass) {
+      return (
+        <div className="Class-main">
+          <section className="Class-data">
+            <h1>{this.state.selectedClass.name}</h1>
+          </section>
+        </div>
+      )
+    } else {
+      return (
+        <div className="Loading">
+          
+        </div>
+      )
+    }
   }
 }
 

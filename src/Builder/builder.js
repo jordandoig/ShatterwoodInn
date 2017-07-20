@@ -4,12 +4,13 @@ import './builder.css';
 import Classes from '../Class/class';
 import Progress from '../Progress/progress';
 import Carousel from '../Carousel/carousel';
+import Race from '../Race/race';
 
 class Builder extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      progressSelections: [],
+      progressSelections: {},
       options: [{}],
       currentSelection: ""
     }
@@ -34,14 +35,23 @@ class Builder extends Component {
           <section className="Builder-Top">
             <Carousel options={this.state.options} handleSelection={this.handleSelection}/>
           </section>
-          <section className="Builder-Left">
-            <Progress progressSelections={this.state.progressSelections}/>
+          <section className="Builder-Main">
+            <section className="Builder-Left">
+              <Progress progressSelections={this.state.progressSelections}/>
+            </section>
+            <section className="Builder-Right">
+              <Route path="/new/class" render={(props) => (
+                <Classes {...props} handleChange={this.handleChange} options={this.state.options}
+                currentSelection={this.state.currentSelection}/>
+              )}/>
+              <Route path="/new/race" render={(props) => (
+                <Race {...props} handleChange={this.handleChange} options={this.state.options}
+                currentSelection={this.state.currentSelection}/>
+              )}/>
+            </section>
           </section>
-          <section className="Builder-Right">
-            <Route path="/new/class" render={(props) => (
-              <Classes {...props} handleChange={this.handleChange} options={this.state.options}
-              currentSelection={this.state.currentSelection}/>
-            )}/>
+          <section className="Builder-Bottom">
+            <Link to="/new/race" className="Builder-Button">NEXT</Link>
           </section>
         </div>
       </Router>
