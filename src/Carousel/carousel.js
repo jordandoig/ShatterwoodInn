@@ -5,7 +5,6 @@ import './carousel.css';
 class Carousel extends Component {
   render () {
     let settings = {
-      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
@@ -14,11 +13,11 @@ class Carousel extends Component {
     };
 
     return (
-      <Slider {...settings}>
+      <Slider {...settings} className="Carousel">
         {
           this.props.options.map((item, index) => {
             return (
-              <img src={item.imgUrl} alt={item.name} key={index}/>
+              <h1 className="Carousel-Item" key={index}>{item.name}</h1>
             )
           })
         }

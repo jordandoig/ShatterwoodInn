@@ -12,6 +12,12 @@ class Builder extends Component {
       progressSelections: [],
       options: [{}]
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange (arr) {
+    this.setState({options: arr});
   }
 
   render () {
@@ -25,7 +31,9 @@ class Builder extends Component {
             <Progress progressSelections={this.state.progressSelections}/>
           </section>
           <section className="Builder-Right">
-            <Route path="/new/class" component={Classes}/>
+            <Route path="/new/class" render={(props) => (
+              <Classes {...props} handleChange={this.handleChange} options={this.state.options}/>
+            )}/>
           </section>
         </div>
       </Router>
