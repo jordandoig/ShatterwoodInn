@@ -5,6 +5,7 @@
   height: 80px;
   padding: 2%;
   color: white;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header-logo {

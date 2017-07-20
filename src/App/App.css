@@ -1,5 +1,4 @@
-/*rich black #020122
-burnt orange #cc5500
+/*burnt orange #cc5500
 flax #EDD382
 kobicha #774E24
 prune #6E0D25*/
@@ -24,6 +23,7 @@ h2 {
   align-items: center;
   height: 70px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .Footer-logo {
