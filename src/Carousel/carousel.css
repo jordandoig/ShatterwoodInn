@@ -7,4 +7,10 @@
 
 .Carousel-Item {
   height: 28px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.slick-center {
+  color: orange;
+  /*text-decoration: underline;*/
 }

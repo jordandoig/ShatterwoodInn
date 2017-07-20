@@ -22,7 +22,9 @@ class Carousel extends Component {
       slidesToScroll: 1,
       centerMode: true,
       initialSlide: 0,
-      afterChange: this.changeSelection
+      afterChange: this.changeSelection,
+      focusOnSelect: true,
+      swipeToSlide: true
     };
 
     return (
