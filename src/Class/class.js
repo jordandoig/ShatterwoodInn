@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import './class.css';
 
 // const classList = [
 //   {
@@ -104,25 +105,12 @@ class Classes extends Component {
   getClasses () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/').then((data) => {
       this.setState({charClasses: data.data.results});
-      console.log(this.props.choices);
     })
   }
 
   render() {
     return (
       <div className="Class-main">
-        {/* <section className="Progress-bar">
-          <header>
-            <h2>Progress</h2>
-          </header>
-          {
-            this.state.progress.map((item, index) => {
-              return (
-                <h3 key={index} className="Progress-item">{item.title}: {item.desc}</h3>
-              )
-            })
-          }
-        </section> */}
         {/* <section className="Class-list"> */
           /* {
             this.state.charClasses.map((cl, index) => {

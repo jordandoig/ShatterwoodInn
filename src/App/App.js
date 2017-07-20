@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' component={Home} choices={this.state.choices}/>
           <Route path='/class' component={Classes} choices={this.state.choices}/>
           <footer className="App-footer">
             <p>&#169; Jordan Doig</p>
