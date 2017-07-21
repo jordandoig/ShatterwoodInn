@@ -1,12 +1,25 @@
 .Builder {
-  height: 100%;
+  height: 90%;
 }
 
 .Builder-Top {
   background-color: rgba(0, 0, 0, 0.7);
+  height: 10%;
 }
 
 .Builder-Main {
   display: flex;
-  height: 90%;
+  height: 85%;
+}
+
+.Builder-Bottom {
+  height: 5%;
+}
+
+.Builder-Left {
+  width: 30%;
+}
+
+.Builder-Right {
+  width: 70%;
 }
