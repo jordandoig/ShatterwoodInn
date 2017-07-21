@@ -48,17 +48,21 @@ class Builder extends Component {
           </section>
           <section className="Builder-Main">
             <section className="Builder-Left">
-              <Progress progressSelections={this.state.progressSelections}/>
+              <section className="Left-Box">
+                <Progress progressSelections={this.state.progressSelections}/>
+              </section>
             </section>
             <section className="Builder-Right">
-              <Route path="/new/class" render={(props) => (
-                <Classes {...props} handleChange={this.handleChange} options={this.state.options}
+              <section className="Right-Box">
+                <Route path="/new/class" render={(props) => (
+                  <Classes {...props} handleChange={this.handleChange} options={this.state.options}
                 currentSelection={this.state.currentSelection}/>
-              )}/>
-              <Route path="/new/race" render={(props) => (
-                <Race {...props} handleChange={this.handleChange} options={this.state.options}
+                )}/>
+                <Route path="/new/race" render={(props) => (
+                  <Race {...props} handleChange={this.handleChange} options={this.state.options}
                 currentSelection={this.state.currentSelection}/>
-              )}/>
+                )}/>
+              </section>
             </section>
           </section>
           <section className="Builder-Bottom">
