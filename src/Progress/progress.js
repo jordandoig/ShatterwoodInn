@@ -25,7 +25,7 @@ class Progress extends Component {
         {
           this.state.progress.map((item, index) => {
             return (
-              <p key={index}>{item.title}: {item.choice}</p>
+              <h3 key={index}>{item.title}: {item.choice}</h3>
             )
           })
         }
