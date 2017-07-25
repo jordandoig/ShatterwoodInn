@@ -111,7 +111,16 @@ class Classes extends Component {
 
   getSelectedClass () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.props.currentSelection.toLowerCase()).then(data => {
-      this.setState({selectedClass: data.data})
+      var selectedClassData = data.data;
+      for (var i = 0; i < this.props.options.length; i++) {
+        if (selectedClassData.name === this.props.options[i].name) {
+          selectedClassData.desc = this.props.options[i].desc;
+          selectedClassData.primaryAbility = this.props.options[i].primaryAbility;
+          selectedClassData.imgUrl = this.props.options[i].imgUrl;
+        }
+      }
+      this.setState({selectedClass: selectedClassData});
+      console.log(this.state.selectedClass);
     })
   }
 
@@ -129,8 +138,18 @@ class Classes extends Component {
     if (this.state.selectedClass) {
       return (
         <div className="Class-main">
-          <section className="Class-data">
-            <h1>{this.state.selectedClass.name}</h1>
+          <section className="Class-top">
+            <h1 className="Class-name">{this.state.selectedClass.name}</h1>
+
+          </section>
+          <section className="Class-mid">
+            <img className="Class-img" src={this.state.selectedClass.imgUrl} alt={this.state.selectedClass.name} />
+            <section className="Class-mid-content">
+              
+            </section>
+          </section>
+          <section className="Class-bottom">
+
           </section>
         </div>
       )

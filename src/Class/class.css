@@ -1,0 +1,34 @@
+.Class-main {
+  height: 100%;
+  width: 100%;
+}
+
+.Class-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+}
+
+.Class-mid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
+
+.Class-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+}
+
+.Class-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.Class-img {
+  height: 100%;
+}
