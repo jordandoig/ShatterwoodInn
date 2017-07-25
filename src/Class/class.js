@@ -139,13 +139,13 @@ class Classes extends Component {
       return (
         <div className="Class-main">
           <section className="Class-top">
-            <h1 className="Class-name">{this.state.selectedClass.name}</h1>
-
+            <h2 className="Class-name">{this.state.selectedClass.name}</h2>
+            <h2>Embodies: {this.state.selectedClass.primaryAbility}</h2>
           </section>
           <section className="Class-mid">
             <img className="Class-img" src={this.state.selectedClass.imgUrl} alt={this.state.selectedClass.name} />
             <section className="Class-mid-content">
-              
+              <h3>{this.state.selectedClass.desc}</h3>
             </section>
           </section>
           <section className="Class-bottom">

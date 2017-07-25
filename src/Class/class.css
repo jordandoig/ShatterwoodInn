@@ -15,6 +15,7 @@
   justify-content: space-around;
   align-items: center;
   height: 70%;
+  margin: 0 5%;
 }
 
 .Class-bottom {
@@ -25,7 +26,7 @@
 }
 
 .Class-name {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   margin: 0;
 }
 
