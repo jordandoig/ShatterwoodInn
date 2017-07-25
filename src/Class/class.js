@@ -81,7 +81,8 @@ class Classes extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      selectedClass: null
+      selectedClass: null,
+      selectedClassFeatures: null
     }
   }
 
@@ -91,6 +92,16 @@ class Classes extends Component {
 
   componentDidUpdate () {
     this.shouldChange();
+  }
+
+  shouldChange () {
+    if (this.props.currentSelection && !this.state.selectedClass) {
+      this.getSelectedClass();
+    } else if (this.state.selectedClass !== null) {
+      if (this.state.selectedClass.name !== this.props.currentSelection) {
+        this.getSelectedClass();
+      }
+    }
   }
 
   getClasses () {
@@ -120,22 +131,30 @@ class Classes extends Component {
         }
       }
       this.setState({selectedClass: selectedClassData});
-      console.log(this.state.selectedClass);
+      this.getLevelData();
     })
   }
 
-  shouldChange () {
-    if (this.props.currentSelection && !this.state.selectedClass) {
-      this.getSelectedClass();
-    } else if (this.state.selectedClass !== null) {
-      if (this.state.selectedClass.name !== this.props.currentSelection) {
-        this.getSelectedClass();
-      }
+  getLevelData () {
+    Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.state.selectedClass.name.toLowerCase() + '/level/1')
+    .then(data => {
+      this.getFeatures(data.data.features);
+    })
+  }
+
+  async getFeatures (arr) {
+    let result = [];
+    for (var i = 0; i < arr.length; i++) {
+      await Axios.get(arr[i].url)
+      .then(async (data) => {
+        result[i] = data.data;
+      })
     }
+    this.setState({selectedClassFeatures: result})
   }
 
   render() {
-    if (this.state.selectedClass) {
+    if (this.state.selectedClassFeatures) {
       return (
         <div className="Class-main">
           <section className="Class-top">
@@ -146,6 +165,17 @@ class Classes extends Component {
             <img className="Class-img" src={this.state.selectedClass.imgUrl} alt={this.state.selectedClass.name} />
             <section className="Class-mid-content">
               <h3>{this.state.selectedClass.desc}</h3>
+              <h3>Hit Die: d{this.state.selectedClass.hit_die}</h3>
+              <ul className="Class-list">Uses: {
+                this.state.selectedClass.proficiencies.map((item, index) => {
+                  return <li key={index} className="Class-list-item">{item.name}</li>;
+                })
+              }</ul>
+              <ul className="Class-list">Features:{
+                this.state.selectedClassFeatures.map((item, index) => {
+                  return <li key={index} className="Class-list-item">{item.name}</li>
+                })
+              }</ul>
             </section>
           </section>
           <section className="Class-bottom">
