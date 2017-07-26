@@ -22,6 +22,7 @@ class Progress extends Component {
   render () {
     return (
       <div className="Progress">
+        <h2>Progress Bar</h2>
         {
           this.state.progress.map((item, index) => {
             return (

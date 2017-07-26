@@ -1,0 +1,62 @@
+.Race-main {
+  height: 100%;
+  width: 100%;
+}
+
+.Race-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+}
+
+.Race-mid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  margin: 0 5%;
+}
+
+.Race-mid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 70%;
+  padding-left: 4%;
+  text-align: left;
+}
+
+.Race-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+}
+
+.Race-name {
+  margin: 0;
+}
+
+.Race-img {
+  height: 100%;
+}
+
+.Race-list {
+  font-weight: bold;
+  font-size: 1.1em;
+  list-style: none;
+  padding: 0;
+}
+
+.Race-list-item {
+  font-weight: normal;
+}
+
+.Race-mid-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

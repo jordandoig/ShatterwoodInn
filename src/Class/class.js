@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import './class.css';
 
@@ -187,7 +188,7 @@ class Classes extends Component {
             </section>
           </section>
           <section className="Class-bottom">
-
+            <Link to='/new/race' onClick={this.props.updateProgress}>Next</Link>
           </section>
         </div>
       )

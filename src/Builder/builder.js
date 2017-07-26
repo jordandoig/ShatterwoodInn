@@ -5,6 +5,7 @@ import Classes from '../Class/class';
 import Progress from '../Progress/progress';
 import Carousel from '../Carousel/carousel';
 import Race from '../Race/race';
+import Sheet from '../Sheet/sheet';
 
 class Builder extends Component {
   constructor (props) {
@@ -55,18 +56,19 @@ class Builder extends Component {
             <section className="Builder-Right">
               <section className="Right-Box">
                 <Route path="/new/class" render={(props) => (
-                  <Classes {...props} handleChange={this.handleChange} options={this.state.options}
-                  currentSelection={this.state.currentSelection}/>
+                  <Classes {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress}/>
                 )}/>
                 <Route path="/new/race" render={(props) => (
-                  <Race {...props} handleChange={this.handleChange} options={this.state.options}
-                  currentSelection={this.state.currentSelection}/>
+                  <Race {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress}/>
+                )}/>
+                <Route path="/new/sheet" render={(props) => (
+                  <Sheet {...props} progressSelections={this.state.progressSelections}/>
                 )}/>
               </section>
             </section>
           </section>
           <section className="Builder-Bottom">
-            <Link to="/new/race" className="Builder-Button" onClick={this.updateProgress}>NEXT</Link>
+            {/* <Link to="/new/race" className="Builder-Button" onClick={this.updateProgress}>NEXT</Link> */}
           </section>
         </div>
       </Router>
