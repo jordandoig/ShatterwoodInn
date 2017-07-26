@@ -146,7 +146,7 @@ class Classes extends Component {
   async getFeatures (arr) {
     let result = [];
     for (var i = 0; i < arr.length; i++) {
-      await Axios.get(arr[i].url)
+      await Axios.get('https://galvanize-cors.herokuapp.com/' + arr[i].url)
       .then(async (data) => {
         result[i] = data.data;
       })
