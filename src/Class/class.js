@@ -138,6 +138,7 @@ class Classes extends Component {
   getLevelData () {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.state.selectedClass.name.toLowerCase() + '/level/1')
     .then(data => {
+      this.setState({selectedClassLevelData: data.data})
       this.getFeatures(data.data.features);
     })
   }
@@ -151,6 +152,12 @@ class Classes extends Component {
       })
     }
     this.setState({selectedClassFeatures: result})
+    // console.log(this.state.selectedClass);
+    // console.log(this.state.selectedClassFeatures);
+  }
+
+  reduceToString (str) {
+
   }
 
   render() {
@@ -160,22 +167,29 @@ class Classes extends Component {
           <section className="Class-top">
             <h2 className="Class-name">{this.state.selectedClass.name}</h2>
             <h2>Embodies: {this.state.selectedClass.primaryAbility}</h2>
+            <h2>Hit Die: d{this.state.selectedClass.hit_die}</h2>
           </section>
           <section className="Class-mid">
             <img className="Class-img" src={this.state.selectedClass.imgUrl} alt={this.state.selectedClass.name} />
             <section className="Class-mid-content">
               <h3>{this.state.selectedClass.desc}</h3>
-              <h3>Hit Die: d{this.state.selectedClass.hit_die}</h3>
-              <ul className="Class-list">Uses: {
-                this.state.selectedClass.proficiencies.map((item, index) => {
-                  return <li key={index} className="Class-list-item">{item.name}</li>;
-                })
-              }</ul>
-              <ul className="Class-list">Features:{
-                this.state.selectedClassFeatures.map((item, index) => {
-                  return <li key={index} className="Class-list-item">{item.name}</li>
-                })
-              }</ul>
+              <section className="Class-mid-section">
+                <b className="Class-list">Uses: {
+                  this.state.selectedClass.proficiencies.map((item, index) => {
+                    return <p key={index} className="Class-list-item">{item.name}</p>;
+                  })
+                }</b>
+                <section>
+                  <b className="Class-list">Features:
+                  {
+                    this.state.selectedClassFeatures.map((item, index) => {
+                    return (
+                      <p key={index} className="Class-list-item">{item.name}</p>
+                    )})
+                  }
+                  </b>
+                </section>
+              </section>
             </section>
           </section>
           <section className="Class-bottom">
