@@ -5,31 +5,31 @@ import './class.css';
 const classList = [
   {
     id: 1,
-    imgUrl: 'http://2.bp.blogspot.com/-6QZ_ClBRnmQ/U_Gxds7eNFI/AAAAAAAAB30/p0FoY9ZEn6k/s1600/Sidharth%2BChaturvedi%2B-%2BBarbarian.png',
+    imgUrl: 'https://2.bp.blogspot.com/-6QZ_ClBRnmQ/U_Gxds7eNFI/AAAAAAAAB30/p0FoY9ZEn6k/s1600/Sidharth%2BChaturvedi%2B-%2BBarbarian.png',
     desc: "A fierce warrior of primitive background who can enter a battle rage",
     primary_ability: 'Strength',
   },
   {
     id: 2,
-    imgUrl: 'http://i.imgur.com/jc5Syoa.jpg',
+    imgUrl: 'https://i.imgur.com/jc5Syoa.jpg',
     desc: "An inspiring magician whose power echoes the music of creation",
     primary_ability: 'Charisma',
   },
   {
     id: 3,
-    imgUrl: 'http://vignette2.wikia.nocookie.net/forgottenrealms/images/3/32/Cleric_PHB5e.jpg/revision/latest?cb=20140921191521',
+    imgUrl: 'https://vignette2.wikia.nocookie.net/forgottenrealms/images/3/32/Cleric_PHB5e.jpg/revision/latest?cb=20140921191521',
     desc: "A priestly champion who wields divine magic in service of a higher power",
     primary_ability: 'Wisdom',
   },
   {
     id: 4,
-    imgUrl: 'http://vignette3.wikia.nocookie.net/forgottenrealms/images/5/50/Druid_PHB5e.jpg/revision/latest?cb=20140921091402',
+    imgUrl: 'https://vignette3.wikia.nocookie.net/forgottenrealms/images/5/50/Druid_PHB5e.jpg/revision/latest?cb=20140921091402',
     desc: "A priest of the Old Faith, wielding the powers of nature— moonlight and plant growth, fire and lightning— and adopting animal forms",
     primary_ability: 'Wisdom',
   },
   {
     id: 5,
-    imgUrl: 'http://vignette1.wikia.nocookie.net/forgottenrealms/images/7/76/Fighter_PHB5e.jpg/revision/latest?cb=20140921091611',
+    imgUrl: 'https://vignette1.wikia.nocookie.net/forgottenrealms/images/7/76/Fighter_PHB5e.jpg/revision/latest?cb=20140921091611',
     desc: "A master of martial combat, skilled with a variety of weapons and armor",
     primary_ability: 'Strength or Dexterity',
   },
@@ -47,25 +47,25 @@ const classList = [
   },
   {
     id: 8,
-    imgUrl: 'http://vignette1.wikia.nocookie.net/forgottenrealms/images/b/bd/Ranger_Aaron-Miller_PHB5e.jpg/revision/latest?cb=20140914204615',
+    imgUrl: 'https://vignette1.wikia.nocookie.net/forgottenrealms/images/b/bd/Ranger_Aaron-Miller_PHB5e.jpg/revision/latest?cb=20140914204615',
     desc: "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
     primary_ability: 'Dexterity and Wisdom',
   },
   {
     id: 9,
-    imgUrl: 'http://vignette2.wikia.nocookie.net/forgottenrealms/images/c/c0/Rogue_PHB5e.jpg/revision/latest?cb=20140921185102',
+    imgUrl: 'https://vignette2.wikia.nocookie.net/forgottenrealms/images/c/c0/Rogue_PHB5e.jpg/revision/latest?cb=20140921185102',
     desc: "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
     primary_ability: 'Dexterity',
   },
   {
     id: 10,
-    imgUrl: 'http://i.imgur.com/hWnlV6c.jpg',
+    imgUrl: 'https://i.imgur.com/hWnlV6c.jpg',
     desc: "A spellcaster who draws on inherent magic from a gift or bloodline",
     primary_ability: 'Charisma',
   },
   {
     id: 11,
-    imgUrl: 'http://vignette4.wikia.nocookie.net/forgottenrealms/images/3/3e/Warlock_PHB5e.png/revision/latest?cb=20140912010808',
+    imgUrl: 'https://vignette4.wikia.nocookie.net/forgottenrealms/images/3/3e/Warlock_PHB5e.png/revision/latest?cb=20140912010808',
     desc: "A wielder of magic that is derived from a bargain with an extraplanar entity",
     primary_ability: 'Charisma',
   },
@@ -152,12 +152,6 @@ class Classes extends Component {
       })
     }
     this.setState({selectedClassFeatures: result})
-    // console.log(this.state.selectedClass);
-    // console.log(this.state.selectedClassFeatures);
-  }
-
-  reduceToString (str) {
-
   }
 
   render() {

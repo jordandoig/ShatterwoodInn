@@ -56,11 +56,11 @@ class Builder extends Component {
               <section className="Right-Box">
                 <Route path="/new/class" render={(props) => (
                   <Classes {...props} handleChange={this.handleChange} options={this.state.options}
-                currentSelection={this.state.currentSelection}/>
+                  currentSelection={this.state.currentSelection}/>
                 )}/>
                 <Route path="/new/race" render={(props) => (
                   <Race {...props} handleChange={this.handleChange} options={this.state.options}
-                currentSelection={this.state.currentSelection}/>
+                  currentSelection={this.state.currentSelection}/>
                 )}/>
               </section>
             </section>
