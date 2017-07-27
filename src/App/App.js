@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import logo from '../logo.png';
 import './App.css';
 import Home from '../Home/home';
@@ -14,7 +14,7 @@ class App extends Component {
           <Route path='/new' component={Builder}/>
           <footer className="App-footer">
             <p>&#169; Jordan Doig</p>
-            <img src={logo} className="Footer-logo" alt="logo"/>
+            <Link to='/' className="Footer-link"><img src={logo} className="Footer-logo" alt="logo"/></Link>
             <p>All rules courtesy of D&D 5e, &#169; Wizards of the Coast</p>
           </footer>
         </div>

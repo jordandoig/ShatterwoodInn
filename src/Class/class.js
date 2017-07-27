@@ -188,7 +188,8 @@ class Classes extends Component {
             </section>
           </section>
           <section className="Class-bottom">
-            <Link to='/new/race' onClick={this.props.updateProgress}>Next</Link>
+            <Link to='/' onClick={this.props.undoProgress} className="Class-button"><img src="http://downloadicons.net/sites/default/files/small-right-arrow-icon-64993.png" className="Class-button back"/></Link>
+            <Link to='/new/race' onClick={this.props.updateProgress} className="Class-button"><img src="http://downloadicons.net/sites/default/files/small-right-arrow-icon-64993.png" className="Class-button"/></Link>
           </section>
         </div>
       )
@@ -201,5 +202,7 @@ class Classes extends Component {
     }
   }
 }
+
+<button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">Next</button>
 
 export default Classes;

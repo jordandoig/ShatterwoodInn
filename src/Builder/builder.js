@@ -40,6 +40,13 @@ class Builder extends Component {
     this.setState({progressSelections: arr});
   }
 
+  undoProgress () {
+    let progress = this.state.progressSelections;
+    let order = this.state.titleOrder;
+    order.push(progress.pop());
+    this.setState({progressSelections: progress, titleOrder: order})
+  }
+
   render () {
     return (
       <Router>
@@ -56,10 +63,10 @@ class Builder extends Component {
             <section className="Builder-Right">
               <section className="Right-Box">
                 <Route path="/new/class" render={(props) => (
-                  <Classes {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress}/>
+                  <Classes {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress} undoProgress={this.undoProgress}/>
                 )}/>
                 <Route path="/new/race" render={(props) => (
-                  <Race {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress}/>
+                  <Race {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress} undoProgress={this.undoProgress}/>
                 )}/>
                 <Route path="/new/sheet" render={(props) => (
                   <Sheet {...props} progressSelections={this.state.progressSelections}/>
@@ -67,9 +74,7 @@ class Builder extends Component {
               </section>
             </section>
           </section>
-          <section className="Builder-Bottom">
-            {/* <Link to="/new/race" className="Builder-Button" onClick={this.updateProgress}>NEXT</Link> */}
-          </section>
+          <section className="Builder-Bottom"></section>
         </div>
       </Router>
     )

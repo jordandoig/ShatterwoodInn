@@ -60,3 +60,11 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.Class-button {
+  height: 90%;
+}
+
+.back {
+  transform: rotate(180deg)
+}

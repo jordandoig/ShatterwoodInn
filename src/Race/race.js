@@ -87,7 +87,8 @@ class Race extends Component {
             </section>
           </section>
           <section className="Race-bottom">
-            <Link to='/new/sheet' onClick={this.props.updateProgress}>Next</Link>
+            <Link to='/new/class' onClick={this.props.undoProgress} className="Class-button"><img src="http://downloadicons.net/sites/default/files/small-right-arrow-icon-64993.png" className="Class-button back"/></Link>
+            <Link to='/new/sheet' onClick={this.props.updateProgress} className="Class-button"><img src="http://downloadicons.net/sites/default/files/small-right-arrow-icon-64993.png" className="Class-button"/></Link>
           </section>
         </div>
 

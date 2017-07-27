@@ -27,6 +27,10 @@ h2 {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.Footer-logo {
+.Footer-link {
   height: 80%;
+}
+
+.Footer-logo {
+  height: 100%;
 }
