@@ -69,7 +69,7 @@ class Builder extends Component {
                   <Race {...props} handleChange={this.handleChange} options={this.state.options} currentSelection={this.state.currentSelection} updateProgress={this.updateProgress} undoProgress={this.undoProgress}/>
                 )}/>
                 <Route path="/new/sheet" render={(props) => (
-                  <Sheet {...props} progressSelections={this.state.progressSelections}/>
+                  <Sheet {...props} progressSelections={this.state.progressSelections} handleChange={this.handleChange}/>
                 )}/>
               </section>
             </section>

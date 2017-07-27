@@ -1,0 +1,22 @@
+.Sheet-main {
+  height: 100%;
+}
+
+.Sheet-img {
+  height: 100%;
+}
+
+#class, #race {
+  position: fixed;
+  top: 130px;
+  /*color: red;*/
+  font-size: 10px;
+}
+
+#class {
+  right: 460px;
+}
+
+#race {
+ right: 510px;
+}
