@@ -45,8 +45,10 @@ class Sheet extends Component {
       return (
         <div className="Sheet-main">
           <img className="Sheet-img" src="http://i.imgur.com/xsfggMG.png" alt="Character Sheet"/>
-          <div id="class">{this.props.progressSelections[0].choice}</div>
-          <div id="race">{this.props.progressSelections[1].choice}</div>
+          <div className="Info-box">
+            <div id="race">{this.props.progressSelections[1].choice}</div>
+            <div id="class">{this.props.progressSelections[0].choice}</div>
+          </div>
         </div>
       )
     } else {
