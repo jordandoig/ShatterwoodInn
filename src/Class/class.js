@@ -206,6 +206,4 @@ class Classes extends Component {
   }
 }
 
-<button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">Next</button>
-
 export default Classes;
