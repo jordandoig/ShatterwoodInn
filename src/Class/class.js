@@ -125,11 +125,14 @@ class Classes extends Component {
     Axios.get('https://galvanize-cors.herokuapp.com/http://www.dnd5eapi.co/api/classes/' + this.props.currentSelection.toLowerCase()).then(data => {
       var selectedClassData = data.data;
       for (var i = 0; i < this.props.options.length; i++) {
-        if (selectedClassData.name === this.props.options[i].name) {
-          selectedClassData.desc = this.props.options[i].desc;
-          selectedClassData.primaryAbility = this.props.options[i].primaryAbility;
-          selectedClassData.imgUrl = this.props.options[i].imgUrl;
+        if (this.props.options[i] !== null) {
+          if (selectedClassData.name === this.props.options[i].name) {
+            selectedClassData.desc = this.props.options[i].desc;
+            selectedClassData.primaryAbility = this.props.options[i].primaryAbility;
+            selectedClassData.imgUrl = this.props.options[i].imgUrl;
+          }
         }
+
       }
       this.setState({selectedClass: selectedClassData});
       this.getLevelData();
